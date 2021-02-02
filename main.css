@@ -1,114 +1,158 @@
-* {
-  overflow-x: hidden;
-}
-.v1_2 {
-  width: 100%;
-  height: 900px;
-  background: rgba(255,255,255,1);
-  opacity: 1;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-}
-a {
-    text-decoration: none;
-color:#000;
-}
-.v1_5 {
-  width: 100%;
-  color: url("bilde1.png");
-  position: absolute;
-  top: 80px;
-  left: 108px;
-  font-family: Graphik;
-  font-weight: Bold;
-  font-size: 96px;
-  opacity: 1;
-  text-align: left;
-}
-.v2_33 span {
-  content: "\2192";
-  font-family: Graphik;
-  padding-right: 40px;
-  font-weight: bold;
-  color: #0041F0;
-  width: 784px;
-  font-size: 18px;
-}
-.name {
-    width: 33%;
-    float: left;
-}
-.name1 {
-    width: 33%;
-    float: left; 
-}
-.name2 {
-    width: 33%;
-    float: left; 
-}
-.v2_33 {
-  width: 802px;
-  height: 59px;
-  position: absolute;
-  top: 280px;
-  left: 105px;
-  overflow: hidden;
-}
-.v2_11 {
-  width: 784px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 200px;
-  left: 113px;
-  font-family: Graphik;
-  font-weight: Regular;
-  font-size: 20px;
-  opacity: 1;
-  text-align: left;
-}
-.v2_16 {
-  width: 158px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 360px;
-  left: 113px;
-  font-family: Graphik;
-  font-weight: Bold;
-  font-size: 24px;
-  opacity: 1;
-  text-align: left;
-}
-.item{
-    width:300px;
-    text-align:center;
-    float:left;
-    padding-right: 130px;
-}
-.item img {
-    border-radius: 50%;
+html, body, .grid-container { 
+    height: 100%;
     width: 100%;
+    font-family: graphik;
+    margin: 0;
 }
 
-#index-gallery{
-    top: 420px;
-    left: 110px;
-    width: 1500px;
-    height: 580px;
-    position: absolute;
-    font-family: graphik;
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    gap: 0px 0px;
+    grid-template-areas:
+        "Navbar Navbar Navbar Navbar"
+        "Header Header Header Header"
+        "mid mid mid mid"
+        "Group Group Group Group";
 }
-#index-gallery h2{
-    font-size: 40px;
-    font-weight: 300;
+
+.Navbar {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100%;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . . . .";
+    grid-area: Navbar;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    padding-top: 1%;
+
 }
-#index-gallery p{
-    font-weight: 300;
+.Navbar img {
+    width: 60%;
+    padding: 0;
+    margin: 0;
+    margin-left: 10%;
 }
-.v2_17 {
-    background-color: #E5E5E5;
+.Navbar a {
+    padding: 30px;
+    font-size: 1.3vw;
+    text-decoration: none;
+    color: black;
+    display: block;
 }
-.v2_18 {
-    
+.Navbar a:hover {
+    color: blue;
+    font-weight: bold;
+}
+.Navbar #prosjektrapport {
+    color: #96968C;
+}
+
+.Header {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 60% 20%;
+    gap: 0px 0px;
+    grid-template-areas:
+        "."
+        "."
+        ".";
+    grid-area: Header;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: url(sky.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    background-color: black;
+}
+.Header h1{
+    font-size: 10vw;
+    margin-left: 5%;
+}
+
+.mid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
+    gap: 0px 0px;
+    grid-template-areas:
+        "."
+        "."
+        "."
+        ".";
+    grid-area: mid;
+    margin-top: 29%;
+}
+.mid img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.mid .text p {
+    margin-left: 6%;
+    margin-right: 30%;
+    margin-top: 5%;
+    font-size: 2.4vw;
+    color: white;
+    font-family: Graphik Light;
+}
+.mid .text {
+    margin-top: 7%;
+}
+.Group h2 {
+    font-size: 2.1vw;
+}
+
+.Group {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 70% 30%;
+    gap: 7px 21px;
+    grid-template-areas:
+        ". . ."
+        ". . .";
+    grid-area: Group;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 88%;
+    padding-bottom: 45%;
+}
+.Group img {
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+.frida {
+    margin-top: 30%;
+}
+.sigrid {
+    margin-top: 30%;
+}
+.mari {
+    margin-top: 30%;
+}
+.Group .text {
+    text-align: center;
+}
+.Group .text h4 {
+    font-family: Graphik Light;
+    font-size: 3vw;
+    margin: 10px 0px 0px 0px;
+}
+.Group .text p {
+    font-size: 1.3vw;
 }
